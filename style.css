@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: cadetblue;
+  padding: 2vw; /* Responsive padding */
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh; /* Responsive margin */
+  font-size: 3vw; /* Responsive font size */
+}
+
+.container {
+  background-color: white;
+  padding: 4vw; /* Responsive padding */
+  width: 50vw; /* Width based on viewport width */
+  max-width: 90vw; /* Limits width to 90% of the viewport width */
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow for better visual on larger screens */
+}
+
+form {
+  margin: 2vh 0 1vh 0; /* Responsive margins */
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+form input {
+  border: 1px solid lightgray;
+  font-size: 2vw; /* Responsive font size */
+  padding-left: 1vw; /* Responsive padding */
+  height: 5vh; /* Responsive height */
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vh; /* Responsive margin */
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+  width: 10vw; /* Responsive width */
+}
+
+.select-container select {
+  font-size: 1.5vw; /* Responsive font size */
+}
+
+.select-container img {
+  max-width: 4vw; /* Responsive image size */
+}
+
+.dropdown i {
+  margin-top: 1.2vh; /* Responsive margin */
+  font-size: 3vw; /* Responsive icon size */
+}
+
+.msg {
+  text-align: center;
+  margin-top: 2vh; /* Responsive margin */
+}
+
+button {
+  margin-top: 2vh; /* Responsive margin */
+  height: 6vh; /* Responsive height */
+  background-color: rosybrown;
+  font-size: 2vw; /* Responsive font size */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+  background-color: #b58876; /* Button hover effect */
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 2vw;
+    width: 90vw; /* Full width on mobile */
+  }
+
+  h2 {
+    font-size: 5vw; /* Adjust heading size for smaller screens */
+  }
+
+  form input {
+    height: 4vh; /* Adjust height for smaller screens */
+    font-size: 2.5vw; /* Adjust font size for smaller screens */
+  }
+  .select-container img {
+    max-width: 50%; /* Ensure it takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    /* You can also specify a fixed size if needed */
+    /* width: 50vw; */ /* Adjust as necessary */
+  }
+  .select-container {
+    width: 25vw;
+    height: auto;
+  }
+  .select-container select {
+    font-size: 13px;
+  }
+  button {
+    font-size: 4vw; /* Adjust button size for smaller screens */
+  }
+}
